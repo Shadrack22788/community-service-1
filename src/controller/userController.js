@@ -32,7 +32,7 @@ class controller {
             if (!comparePassword) {
                 return res.status(404).json({ message: "invalid password!" })
             } else {
-                const token = jwt.sign({ user: user }, process.env.SCRET_KEY, { expiresIn: "2d" })
+                const token = jwt.sign({ user: user }, process.env.SECRET_KEY, { expiresIn: "2d" })
                 return res.status(200).json({ message: "login successful", token })
             }
         }
