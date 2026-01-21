@@ -6,7 +6,7 @@ import { VerifyAccess } from "../middleware/VerifyAccess.js"
 const router = express.Router()
 router.post("/", EmailExist, controller.signup)
 router.post("/login",controller.login)
-router.get("/users",VerifyAccess('admin'),controller.getAllUsers)
+router.get("/users",VerifyAccess('user'),controller.getAllUsers)
 router.get("/:id",controller.getOneUser)
 router.delete("/users",controller.deletAllUser)
 router.patch("/:id",controller.updateUser)
