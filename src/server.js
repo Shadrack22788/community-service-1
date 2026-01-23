@@ -19,9 +19,9 @@ app.listen(PORT, () => {
 });
 
 mongoose
-.connect(db)
-.then(() => {
-  console.log('Database connected successfully');
-}).catch((error) => { console.log(`Error is ${error}`) });
+  .connect(db)
+  .then(() => {
+    console.log('Database connected successfully');
+  }).catch((error) => { console.log(`Error is ${error}`) });
 
 
